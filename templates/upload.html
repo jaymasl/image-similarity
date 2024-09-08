@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Similarity Checker</title>
+    <title>Image Similarity Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    
+
     <h1>Upload Two Images to Compare</h1>
-    <p>This is a basic Flask app that detects the similarity between two different images.</p>
-    <p>Uploading two identical images returns 100%. Uploading two images that share no similarity returns 0%.</p>
+    <p>This basic Flask app detects the similarity between two different images.</p>
 
     <form action="/compare" method="post" enctype="multipart/form-data">
         <label for="image1">Image 1:</label>

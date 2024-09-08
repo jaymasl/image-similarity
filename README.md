@@ -1,2 +1,2 @@
 This is a basic Flask app that detects the similarity between two different images. 
-An identical image should return 100% and two images that share absolutely no similarity should return 0%.
+Uploading two identical images returns 100%. Uploading two images that share no similarity returns 0%.

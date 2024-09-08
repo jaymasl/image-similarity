@@ -7,7 +7,11 @@
     <title>Image Similarity Checker</title>
 </head>
 <body>
+    
     <h1>Upload Two Images to Compare</h1>
+    <p>This is a basic Flask app that detects the similarity between two different images.</p>
+    <p>Uploading two identical images returns 100%. Uploading two images that share no similarity returns 0%.</p>
+
     <form action="/compare" method="post" enctype="multipart/form-data">
         <label for="image1">Image 1:</label>
         <input type="file" name="image1" accept="image/*" required><br><br>
@@ -19,5 +23,6 @@
     {% if similarity is not none %}
         <h2>Similarity: {{ similarity }}%</h2>
     {% endif %}
+
 </body>
 </html>

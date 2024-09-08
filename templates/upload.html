@@ -1,0 +1,23 @@
+<!-- templates/upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Similarity Checker</title>
+</head>
+<body>
+    <h1>Upload Two Images to Compare</h1>
+    <form action="/compare" method="post" enctype="multipart/form-data">
+        <label for="image1">Image 1:</label>
+        <input type="file" name="image1" accept="image/*" required><br><br>
+        <label for="image2">Image 2:</label>
+        <input type="file" name="image2" accept="image/*" required><br><br>
+        <input type="submit" value="Compare Images">
+    </form>
+
+    {% if similarity is not none %}
+        <h2>Similarity: {{ similarity }}%</h2>
+    {% endif %}
+</body>
+</html>
